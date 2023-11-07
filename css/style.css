@@ -2,6 +2,7 @@
 -----------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------*/
 /*---Body------------------------------------*/
+/*change basic rule for font and background*/
 body{
     font-family: 'Poppins', serif;
     background-image: url('../images/concrete_seamless.png');
@@ -9,6 +10,7 @@ body{
 }
 
 /*---Logo------------------------------------*/
+/*create aninmation for logo, then apply it */
 @keyframes logo_animate{
     0%{
         width: 25px;
@@ -28,6 +30,7 @@ body{
 }
 
 /*---Header---------------------------------*/
+/*apply flex to header */
 header{
     display: flex;
     flex-direction: column;
@@ -35,6 +38,7 @@ header{
     align-items: center;
 }
 /*---Navigation Bar-------------------------*/
+/*apply flex to navigation bar, make the links have same color when clicked or not clicked*/
 .nav_links{
     display:flex;
     flex-direction: column;
@@ -49,6 +53,7 @@ header{
 }
 
 /*---Card Class-------------------------*/
+/*change the background color and add border to card class header, and apply round corners */
 .card > header{
     background-color: #288088;
     border: solid 2px #45ADAD;
@@ -64,6 +69,7 @@ header{
 }
 
 /*---Pricing Class-------------------------*/
+/*apply flex to pricing class to reposition all the cards */
 .pricing{
     display: flex;
     flex-direction: row;
@@ -73,12 +79,14 @@ header{
 }
 
 /*---Image Class-------------------------*/
+/*add borders to all gallery images*/
 .gallery img{
     border: solid 10px #50C7C7;
     margin: 10px;
     width: 300px;
 }
 /*---Gallery Class-------------------------*/
+/*add flex to gallery class and reposition all gallery photos */
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -108,7 +116,7 @@ header{
         display: flex;
         flex-direction: row;
     }
-    /*---Pricing---------------------------------*/
+    /*---Pricing & Card class---------------------------------*/
     .pricing{
         display: flex;
         flex-direction: row;
@@ -121,6 +129,7 @@ header{
         flex-basis: 275px;
     }
     /*---Sticky Header---------------------------------*/
+    /*make sure the header sticky on the top when scrolling*/
     body > header{
         position: sticky;
         top: 0;
@@ -141,13 +150,15 @@ body{
     background-image: none; 
 }
 /*---Navigation Bar---------------------------------*/ 
-nav{
-    display: flex;
+/*I search this width property online to space out my nav links, not sure what it is but it helps*/
+nav {
+    width: -webkit-fill-available;
 }
-.nav_links{
-    display:flex;
+/*space out links*/
+.nav_links {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 /*---Pricing Class---------------------------------*/ 
 .pricing {
@@ -170,7 +181,8 @@ nav{
 #gallery {
     display: none;
 }
-
+/*---Add Thumb Up Emoji---------------------------------*/
+/*add emoji only to second li of the ul*/
 .card ul li:nth-child(2)::after{
     content: "\1F44D";
 }
